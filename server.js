@@ -8,6 +8,7 @@ const morgan = require('morgan');
 const methodOverride = require('method-override');
 const PORT = process.env.PORT;
 const Animal = require('./models/animals.js');
+const { application } = require('express');
 
 
 
@@ -44,18 +45,29 @@ app.get('/animals', (req, res) => {
     });
 });
 //NEW -get
+app.get('/animals/new', (req, res) => {
+    res.render('animals/new.ejs');
+});
 
 //DESTROY -delete
 
 //UPDATE - put
 
 //CREATE - post
+app.post('/animals', (req, res) => {
+    req.body.extinct = req.body.extinct === "on" ? true : false
+    Animal.create(req.body, (err, animal) => {
+        res.redirect('/animals');
+    })
+    
+})
 
 //EDIT - get
 
 //SHOW - get
 app.get('/animals/:id', (req, res) => {
-    Animal.findById(req.params.id, (err, animal) => {
+    const {id} = req.params
+    Animal.findById(id, (err, animal) => {
         res.render('animals/show.ejs', { animal })
     });
 });

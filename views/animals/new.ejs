@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head.ejs") %>
+</head>
+<body>
+    <%- include ("../partials/header.ejs") %>
+    <form action="/animals/" method="POST">
+        <fieldset>
+            <legend>Enter New Animal Data</legend>
+            <label for="species">Species:</label>
+            <input type="text" id="species" name="species" placeholder="enter species name"><br>
+            <label for="lifeExpectancy">Average number of years life expectancy:</label>
+            <input type="number" id="lifeExpectancy"name="lifeExpectancy" placeholder="enter number">
+            <label for="location">Location of habitat:</label>
+            <input type="text" id="location" name="name" placeholder="enter location">
+            <label for="extinct">Check box if species is extinct:</label>
+            <input type="checkbox" id="extinct" name="extinct"><br>
+            <input type="submit" value="Add new species to database">
+        </fieldset>
+    </form>
+    <%- include ("../partials/footer.ejs") %>
+</body>
+</html>
