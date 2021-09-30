@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("../partials/head.ejs") %>
+
+<body>
+    <%- include ("../partials/header.ejs") %>
+    <div class='container'>
+    <% for(animal of animals){ %>
+        <a href="/animals/<%= animal._id %>"><div class="index-style"><%= animal.species %></div></a>
+    <%}%>
+</div>  
+
+    <%- include ("../partials/footer.ejs") %>
+</body>
+</html>

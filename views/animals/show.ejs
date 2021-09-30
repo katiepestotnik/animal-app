@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head.ejs") %>
+</head>
+<body>
+    <%- include ("../partials/header.ejs") %>
+    <div class="show-style">
+        <h1><%= animal.species %></h1>
+
+        <li>Average Life Expectancy: <%= animal.lifeExpectancy %> years</li>
+        <li>Habitat Location: <%= animal.location %></li>
+        <li>Is this animal extinct? <%= animal.extinct = animal.extinct === false ? "No":"Yes" %></li>
+    </div>
+    <%- include ("../partials/footer.ejs") %>
+</body>
+</html>

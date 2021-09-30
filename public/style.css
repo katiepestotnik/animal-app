@@ -1,0 +1,11 @@
+.index-style {
+    padding: 5px;
+    margin-bottom: 5px;
+
+}
+a {
+    text-decoration: none;
+}
+.show-style {
+    list-style: none;
+}
