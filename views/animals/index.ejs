@@ -11,7 +11,18 @@
         <a href="/animals/<%= animal._id %>"><li class="index-style"><%= animal.species %></li></a>
     <%}%>
     </ul>
-</div>  
+    </div>
+    <div class="api-test">  
+        <h5>Is this data accurate? Predict someone's age by their name.</h5>
+        <div class="container">
+    <form id="index-form">
+        <input  id="user-input" type="text" placeholder="Enter Name" />
+        <input type="submit" value="Search">
+    </form>
+    <p style="margin-left: 5px;">Age: </p>
+    <p id="age"></p>
+    </div>
+    </div>
     <%- include ("../partials/footer.ejs") %>
 </body>
 </html>

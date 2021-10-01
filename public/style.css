@@ -7,3 +7,7 @@ a {
 .show-style {
     list-style: none;
 }
+.container {
+    display: flex;
+    padding: 5px;
+}
