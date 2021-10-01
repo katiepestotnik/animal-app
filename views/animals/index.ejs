@@ -13,14 +13,21 @@
     </ul>
     </div>
     <div class="api-test">  
-        <h5>Is this data accurate? Predict someone's age by their name.</h5>
+        <h5>Select a dog breed below to see a random image!</h5>
         <div class="container">
     <form id="index-form">
-        <input  id="user-input" type="text" placeholder="Enter Name" />
-        <input type="submit" value="Search">
+        <label for="user-input">Select Breed:</label>
+        <select name="user-input" id="user-input">
+            <option value="mountain">Bernese Mountain Dog</option>
+            <option value="retriever">Retriever</option>
+            <option value="akita">Akita</option>
+            <option value="malamute">Malamute</option>
+            <option value="african">African</option>
+        </select>
+        <input type="submit" value="Enter">
+        <img style="display:none; padding:5px"id='dog-photo' src="" alt="oops">
     </form>
-    <p style="margin-left: 5px;">Age: </p>
-    <p id="age"></p>
+
     </div>
     </div>
     <%- include ("../partials/footer.ejs") %>

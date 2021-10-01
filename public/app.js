@@ -4,11 +4,12 @@ const $input = $('#user-input');
 const handleAPIEvent = (event) => {
     event.preventDefault();
     $.ajax({
-        url: `https://api.agify.io/?name=${$input.val()}`
+        url: `https://dog.ceo/api/breed/${$input.val()}/images/random`
     }).then((data) => {
         apiData = data;
-        const $age = $('#age')
-        $age.text(` ${apiData.age}`)
+        const $photo = $('#dog-photo');
+        $photo.attr('src', apiData.message);
+        $photo.show()
     },
         (error) => {
             console.log(`There is a problem`, error)
