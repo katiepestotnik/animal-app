@@ -6,25 +6,31 @@
 <body class="background-style">
     <nav style="background-color: #42b6de;"><h3 style="color: #42b6de">TESTING</h3></nav>
     <div class="padding">
-    <div>
+    <div class="container">
         <ul>
         <% for(animal of animals){ %>
         <a href="/animals/<%= animal._id %>"><li><%= animal.species %></li></a>
         <%}%>
         </ul>
+   
     </div>
-    <nav><a href="/animals/new"><button>Add Animal</button></a></nav>
+    <a href="/animals/new"><button>Add Animal</button></a>
     <div class="api-test">  
         <h5>Select a dog breed below to see a random image!</h5>
         <div class="container">
     <form id="index-form">
         <label for="user-input">Select Breed:</label>
         <select name="user-input" id="user-input">
-            <option value="mountain">Bernese Mountain Dog</option>
+            <option value="mountain">Mountain Dog</option>
             <option value="retriever">Retriever</option>
             <option value="akita">Akita</option>
             <option value="malamute">Malamute</option>
             <option value="african">African</option>
+            <option value="husky">Husky</option>
+            <option value="komondor">Komondor</option>
+            <option value="mastiff">Mastiff</option>
+            <option value="stbernard">St. Bernard</option>
+            <option value="pointer">Pointer</option>
         </select>
         <input type="submit" value="Enter" style="background-color: #42b6de;">
         <img style="display:none; padding:5px"id='dog-photo' src="" alt="oops">
