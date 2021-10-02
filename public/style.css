@@ -4,7 +4,6 @@
 .padding {
     padding: 5px;
 }
-
 a {
     text-decoration: none;
 }
@@ -14,16 +13,17 @@ a {
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    
+    justify-content: flex-start;   
 }
 img {
     height: 250px;
     width: 300px;
-
 }
 button {
     background-color: #42b6de;
 }
-
-
+@media only screen and (min-width: 500px) {
+    #media-query {
+        margin-left: 20px
+    }
+}

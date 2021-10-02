@@ -1,6 +1,4 @@
-
 const $input = $('#user-input'); 
-
 const handleAPIEvent = (event) => {
     event.preventDefault();
     $.ajax({
@@ -9,12 +7,10 @@ const handleAPIEvent = (event) => {
         apiData = data;
         const $photo = $('#dog-photo');
         $photo.attr('src', apiData.message);
-        $photo.show()
+        $photo.show();
     },
         (error) => {
-            console.log(`There is a problem`, error)
+            console.log(`There is a problem`, error);
         });
 };
-
-
 $('#index-form').on('submit', handleAPIEvent);
