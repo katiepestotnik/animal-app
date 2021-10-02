@@ -3,8 +3,9 @@
 <head>
     <%- include("../partials/head.ejs") %>
 </head>
-<body>
-    <%- include ("../partials/header.ejs") %>
+<body class="background-style">
+    <div class="padding">
+    <nav><a href="/animals"><button>Index Page</button></a></nav>
     <form action="/animals/" method="POST">
         <fieldset>
             <legend>Enter New Animal Data</legend>
@@ -16,9 +17,9 @@
             <input type="text" id="location" name="location" placeholder="enter location">
             <label for="extinct">Check box if species is extinct:</label>
             <input type="checkbox" id="extinct" name="extinct"><br>
-            <input type="submit" value="Add">
+            <input style="background-color: #42b6de" type="submit" value="Add">
         </fieldset>
     </form>
-    <%- include ("../partials/footer.ejs") %>
+</div>
 </body>
 </html>

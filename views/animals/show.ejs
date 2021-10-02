@@ -3,21 +3,25 @@
 <head>
     <%- include("../partials/head.ejs") %>
 </head>
-<body>
-    <%- include ("../partials/header.ejs") %>
-    <div class="show-style">
+<body class="background-style">
+    <div class="padding">
+
+
+        <a href="/animals">
+            <button>Index Page</button>
+        </a>
+
+
+    <div class="li-style">
         <h1><%= animal.species %></h1>
         <li>Average Life Expectancy: <%= animal.lifeExpectancy %> years</li>
         <li>Habitat Location: <%= animal.location %></li>
         <li>Is this animal extinct? <%= animal.extinct = animal.extinct === false ? "No":"Yes" %></li>
     </div>
-    <div>
-        <a href="/animals/<%= animal._id %>/edit"><button>Edit <%= animal.species %></button></a>
-
-        <form action="/animals/<%= animal._id %>?_method=DELETE" method="POST">
-        <input type="submit" value="DELETE <%=animal.species%>" />
-        </form>
-    </div>
-    <%- include ("../partials/footer.ejs") %>
+    <a href="/animals/<%= animal._id %>/edit"><button>Edit <%= animal.species%></button></a>    
+    <form action="/animals/<%= animal._id %>?_method=DELETE" method="POST">
+    <input type="submit" style="background-color: #42b6de" value="DELETE <%= animal.species%>" />
+    </form>
+</div>
 </body>
 </html>

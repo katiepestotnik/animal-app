@@ -3,15 +3,17 @@
 
 <%- include("../partials/head.ejs") %>
 
-<body>
-    <%- include ("../partials/header.ejs") %>
-    <div class='container'>
+<body class="background-style">
+    <nav style="background-color: #42b6de;"><h3 style="color: #42b6de">TESTING</h3></nav>
+    <div class="padding">
+    <div>
         <ul>
-    <% for(animal of animals){ %>
-        <a href="/animals/<%= animal._id %>"><li class="index-style"><%= animal.species %></li></a>
-    <%}%>
-    </ul>
+        <% for(animal of animals){ %>
+        <a href="/animals/<%= animal._id %>"><li><%= animal.species %></li></a>
+        <%}%>
+        </ul>
     </div>
+    <nav><a href="/animals/new"><button>Add Animal</button></a></nav>
     <div class="api-test">  
         <h5>Select a dog breed below to see a random image!</h5>
         <div class="container">
@@ -24,12 +26,11 @@
             <option value="malamute">Malamute</option>
             <option value="african">African</option>
         </select>
-        <input type="submit" value="Enter">
+        <input type="submit" value="Enter" style="background-color: #42b6de;">
         <img style="display:none; padding:5px"id='dog-photo' src="" alt="oops">
     </form>
-
     </div>
     </div>
-    <%- include ("../partials/footer.ejs") %>
+</div>
 </body>
 </html>
