@@ -16,7 +16,7 @@
         </div>
         <a href="/animals/<%= animal._id %>/edit"><button>Edit <%= animal.species%></button></a>    
         <form action="/animals/<%= animal._id %>?_method=DELETE" method="POST">
-            <input type="submit" style="background-color: #42b6de" value="DELETE <%= animal.species%>" />
+            <input type="submit" style="background-color: #42b6de; color: #fff"value="DELETE <%= animal.species%>" />
         </form>
     </div>
 </body>

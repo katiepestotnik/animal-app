@@ -19,8 +19,9 @@ img {
     height: 250px;
     width: 300px;
 }
-button {
+button, .submit-style {
     background-color: #42b6de;
+    color: #fff
 }
 @media only screen and (min-width: 500px) {
     #media-query {

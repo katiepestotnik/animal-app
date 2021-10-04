@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('../partials/head.ejs') %>
-<body>
+<body class="background-style">
     <main>
         <form action="/user/login" method="POST">
             <fieldset>
                 <label for="username">Username: <input type="text" name="username" id="username" required></label>
                 <label for="password">Password: <input type="password" id="password" name="password" required></label>
-                <input type="submit" value="Login">
+                <input type="submit" value="Login" style="background-color: #42b6de; color: #fff"/>
             </fieldset>
         </form>
     </main>
