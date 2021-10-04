@@ -31,10 +31,16 @@ router.post('/login', (req, res) => {
                 req.session.loggedIn = true;
                 res.redirect('/animals');
             } else {
-                res.send('Incorrect Password')
+                res.send('WRONG PASSWORD')
             };
         };
     });
 });
+
+router.get('/logout', (req, res) => {
+    req.session.destroy((err) => {
+        res.redirect('/')
+    })
+})
 
 module.exports = router;

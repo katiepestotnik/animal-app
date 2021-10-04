@@ -3,15 +3,16 @@
 //////////////////
 require('dotenv').config();
 const express = require('express');
-const app = express();
 const morgan = require('morgan');
 const methodOverride = require('method-override');
-const PORT = process.env.PORT;
 const AnimalRouter = require('./controllers/animals');
 const UserRouter = require('./controllers/user');
 const HomeRouter = require('./controllers/home')
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
+
+const app = express();
+const PORT = process.env.PORT;
 //MIDDLEWARE
 ///////////////////////////
 app.use(express.urlencoded({ extended: true }));
@@ -32,7 +33,7 @@ app.use('/', HomeRouter);
 //////////////////////////
 //HOME -get
 app.get('/', (req, res) => {
-    res.send(`HOMEPAGE`);
+    res.render('index.ejs');
 });
 //////////////////////
 app.listen(PORT, () => {

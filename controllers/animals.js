@@ -1,7 +1,16 @@
 const express = require('express');
-const Animal = require('../models/animals.js');
+const Animal = require('../models/animals');
 
 const router = express.Router();
+
+//Authorization middleware
+router.use((req, res, next) => {
+    if (req.session.loggedIn) {
+        next();
+    } else {
+        res.redirect('/')
+    }
+})
 
 //SEED -get
 router.get('/seed', (req, res) => {
