@@ -27,7 +27,7 @@ router.get('/seed', (req, res) => {
 });
 //INDEX -get
 router.get('/', (req, res) => {
-    Animal.find({}, (err, animals) => {
+    Animal.find({username: req.session.username}, (err, animals) => {
         res.render('animals/index.ejs', { animals });
     });
 });
@@ -52,7 +52,8 @@ router.put('/:id', (req, res) => {
 });
 //CREATE - post
 router.post('/', (req, res) => {
-    req.body.extinct = req.body.extinct === "on" ? true : false
+    req.body.extinct = req.body.extinct === "on" ? true : false;
+    req.body.username = req.session.username;
     Animal.create(req.body, (err, animal) => {
         res.redirect('/animals');
     });

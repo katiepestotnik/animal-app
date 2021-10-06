@@ -4,9 +4,9 @@
 <%- include("../partials/head.ejs") %>
 
 <body class="background-style">
-    <nav style="background-color: #42b6de;"><h3 style="color: #fff"><a href="/user/logout"><button style="background-color: #fff; color: #42b6de">LOGOUT</button></a></h3></nav>
-    <div class="padding">
-        <div id="media-query" class="container">
+    <nav style="background-color: #42b6de;"><h3 style="color: #fff"><a href="/user/logout"><button style="background-color: #fff; color: hsl(195, 70%, 56%)">LOGOUT</button></a></h3></nav>
+    <div class="padding" id="media-query">
+        <div>
             <ul>
             <% for(animal of animals){ %>
             <a href="/animals/<%= animal._id %>"><li><%= animal.species %></li></a>

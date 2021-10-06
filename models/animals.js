@@ -4,7 +4,8 @@ const animalsSchema = new mongoose.Schema({
     species: String,
     extinct: Boolean,
     location: String,
-    lifeExpectancy: Number
+    lifeExpectancy: Number,
+    username: String
 });
 const Animal = mongoose.model('Animal', animalsSchema);
 module.exports = Animal;
