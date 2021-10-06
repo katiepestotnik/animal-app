@@ -1,6 +1,10 @@
 .background-style {
     background-image: url(https://www.xmple.com/wallpaper/blue-gradient-white-linear-1920x1080-c2-87cefa-ffffff-a-270-f-14.svg);
 }
+.home-style {
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20201016/pngtree-cartoon-giraffe-lion-forest-leaves-animal-background-image_419259.jpg);
+    background-size: cover;
+}
 .padding {
     padding: 5px;
 }
@@ -13,7 +17,17 @@ a {
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;   
+    justify-content: flex-start;
+   
+}
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.home-buttons {
+    margin: 0 auto;
+    margin-top: 50px;
 }
 img {
     height: 250px;
@@ -23,8 +37,21 @@ button, .submit-style {
     background-color: #42b6de;
     color: #fff
 }
+input[type=text], input[type=number], input[type=password] {
+    border: 2px solid #42b6de
+}
+h1 {
+    text-align: center;
+    margin-top: 35px;
+    color: #ff562f
+}
 @media only screen and (min-width: 500px) {
     #media-query {
         margin-left: 20px
+    }
+}
+@media only screen and (max-width: 736px){
+    h1 {
+        font-size: 20px;
     }
 }
